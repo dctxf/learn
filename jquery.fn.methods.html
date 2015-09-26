@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.191.js"></script>
+</head>
+<body>
+	<div class="addclass">addclass</div>
+	<div class="attr">attr</div>
+
+	<input type="checkbox" checked="checked" id="a">
+	<input type="text" id="b">
+</body>
+<script>
+	$(function(){  //DOM加载完毕
+
+		$('.addclass').addClass('active');
+
+
+		/*-------------------------------------------------------*/
+
+
+		$('.attr').attr({
+			'ab' : 1,
+			'b' : 2
+		});  //写入
+
+		$('.attr').attr('c',5); //写入
+
+		console.log( 'c :' + $('.attr').attr('c')); //读取
+
+		/*-------------------------------------------------------*/
+
+		if( $('.addclass').hasClass('active') ){
+			$('.addclass').addClass('hasactive');
+		}
+
+
+		/*-------------------------------------------------------*/
+
+
+		//$('.addclass').html('<script>alert(1)</sc' + 'ript>');
+
+		$('.addclass').text('<script>alert(1)</sc' + 'ript>');
+
+		$('#b').on('click',function(){
+			var _val = $('#a').val();
+			$('.addclass').text( _val );  //xss漏洞
+		})
+
+
+		/*-------------------------------------------------------*/
+
+
+		$('#a').prop('checked', false ); //元素自身拥有的属性。而不是自定义的
+
+
+		/*-------------------------------------------------------*/
+
+
+		$('.attr').removeAttr('ab b'); //removeClass &  removeProp
+
+
+		/*-------------------------------------------------------*/
+
+
+
+		$('.attr').on('click',function(){
+			$(this).toggleClass('xxx');  //有这个class则删掉。没有则添加
+		})
+		/*-------------------------------------------------------*/
+		$('#b').val('hhh');
+		console.log( $('#b').val() );
+
+		/*-------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+	});
+
+	/*window.onload = function(){ //DOM加载完毕，资源加载完毕。
+
+	}*/
+</script>
+</html>
