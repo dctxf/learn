@@ -1,0 +1,47 @@
+//nav
+$navBg:#333;
+.nav{
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	padding: ($baseInt * 2) $baseInt;
+	margin-bottom: $baseInt;
+	overflow: hidden;
+	border-bottom: 1px solid $border;
+	.logo{
+		font-size: $fontSize * 2;
+		float: left;
+		margin-right: $baseInt;
+		border-right: 1px solid $border;
+		padding-right: $baseInt * 2;
+		margin-right: $baseInt * 2;
+		a{
+			&:hover{
+				text-decoration: none;
+			}
+			&:visited{
+				
+			}
+		}
+	}
+	.search{
+		float: left;
+		input{
+			border:none;
+			background-color: none;
+			color: $grayLight;
+		}
+	}
+	.navbar{
+		float: right;
+		li{
+			display: inline-block;
+			margin-right: $baseInt * 2;
+			a{
+				font-size: $fontSize + 2;
+				&:hover{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

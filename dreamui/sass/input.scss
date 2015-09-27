@@ -1,0 +1,22 @@
+.input-group{
+	width: 100%;
+	margin-bottom: $baseInt;
+	.input-name{
+		width: 100%;
+		line-height: 1.8em;
+	}
+	.input-box{
+		input[type="text"].input-control{
+			width: 100%;
+			line-height: 2.4em;
+			padding: 0 $baseInt;
+			border: 1px solid $border;
+			border-radius: $radius;
+			background:none;
+			&:focus{
+				border: 1px solid $blue;
+				box-shadow: 0 0 4px rgba(23, 152, 255, 0.6)
+			}
+		}
+	}
+}

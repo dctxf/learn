@@ -1,0 +1,42 @@
+//reset.scss
+*,*:after, *:before {
+    box-sizing: border-box;
+}
+html,body,div,h1,h2,h3,h4,h5,h6,p,img,ul,li,ol,input,button{
+	margin: 0;
+	padding: 0;
+}
+html{
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+	font-size: $fontSize - 2;
+	color: $black;
+}
+
+p{
+	line-height: $lineHeight;
+	font-size: $fontSize;
+	color: $grayLight;
+}
+a{
+	color: $blue;
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+	&:visited{
+		color: $blue + 40;
+	}
+}
+img{
+	border: none;
+}
+ul,li,ol{
+	list-style: none;
+}
+input,button,textarea{
+	outline: none;
+}
