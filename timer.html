@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>timer</title>
-	<script src="jquery.191.js"></script>
+	<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="timer-box">
@@ -17,7 +17,8 @@
 		var timer = 0,	//定义开始时间
 			$startBtn = $('.timer-start'),	//定义开始按钮
 			$stopBtn = $('.timer-stop'),	//定义开始按钮
-			$screen = $('.screen');	//定义显示屏幕
+			$screen = $('.screen'),	//定义显示屏幕
+			timeout = null;
 
 		$startBtn.on('click',function(){
 			timerAdd();
@@ -28,11 +29,12 @@
 		$stopBtn.on('click',function(){
 			$(this).attr('disabled','disabled');
 			$startBtn.removeAttr('disabled','disabled');
+			clearTimeout(timeout);
 		})
 
 
 		function timerAdd(){
-			setTimeout(function(){
+			timeout = setTimeout(function(){
 				timer++;	//一秒后时间多一
 				$screen.text(timer);	//输出时间
 				// console.log(timer);

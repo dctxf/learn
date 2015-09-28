@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>div.center</title>
+	<script src="jquery.191.js"></script>
+	<style>
+		#box{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	$(function(){
+
+		$.fn.center = function(){
+			this.css({
+				'position' : 'absolute',
+				'top' : ($(window).height() - this.height()) / 2 + $(window).scrollTop() + 'px',
+				'left' : ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + 'px'
+			})
+			return this;
+		}
+
+		$("#box").center();
+		console.log($('#box').offset())
+	})
+</script>
+</html>

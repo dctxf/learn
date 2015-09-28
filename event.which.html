@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event.pagesX</title>
+	<script src="jquery.191.js"></script>
+</head>
+<body>
+	<div id="show"></div>
+</body>
+<script>
+	var $show = $('#show');
+
+	$('html').on('mousedown',function(e){
+		//switch写法
+		switch(e.which){
+			case 1: $show.text('鼠标左键');
+			break;
+			case 2: $show.text('鼠标中键');
+			break;
+			case 3: $show.text('鼠标右键');
+			break;
+		}
+		//if写法
+		if (e.which == 1) {
+			console.log('鼠标左键');
+		}else if(e.which == 2){
+			console.log('鼠标中键');
+		}else if(e.which == 3){
+			console.log('鼠标右键');
+		};
+		return false;
+	})
+</script>
+</html>

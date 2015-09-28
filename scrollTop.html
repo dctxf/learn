@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollTop</title>
+	<script src="jquery.191.js"></script>
+	<style>
+		body{
+			height: 3000px;
+		}
+		#top{
+			width: 30px;
+			height: 30px;
+			background-color: #f40;
+			position: fixed;
+			top: 30px;
+			right: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="top"><a href="#">返回顶部</a></div>
+</body>
+<script>
+	jQuery.fn.scrollTop = function(speed){
+		var targetOffset = $(this).offset().top;
+		$('html body').stop().animate({
+			scrollTop : targetOffset
+		},speed)
+		return false;
+	}
+	$('#top a').on('click',function(){
+		$('body').scrollTop(500);
+		return false;
+	})
+</script>
+</html>
