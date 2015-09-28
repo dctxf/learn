@@ -15,6 +15,13 @@
 			position: fixed;
 			top: 30px;
 			right: 30px;
+			text-align: center;
+			line-height: 12px;
+		}
+		#top a{
+			color: #fff;
+			text-decoration: none;
+			font-size: 12px;
 		}
 	</style>
 </head>
@@ -22,10 +29,14 @@
 	<div id="top"><a href="#">返回顶部</a></div>
 </body>
 <script>
-	jQuery.fn.scrollTop = function(speed){
-		var targetOffset = $(this).offset().top;
-		$('html body').stop().animate({
-			scrollTop : targetOffset
+	/**
+	 * [scrollTop 返回顶部]
+	 * @param  {[这里是时间/毫秒]} speed [速度]
+	 */
+	jQuery.fn.scrollTop = function(speed){	//jQuery.fn.插件名 在jquery下绑定方法
+		var targetOffset = $(this).offset().top;	//获取当前元素的相对文档的坐标
+		$('html body').stop().animate({		//停止正在执行的动画
+			scrollTop : targetOffset	//body的scrollTop值等于当前元素的offset().top值
 		},speed)
 		return false;
 	}
