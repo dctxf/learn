@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.191.js"></script>
+</head>
+<body>
+<div style="height:2000px"></div>
+	<a href="#">aaa</a>
+	<a href="#">aaa</a>
+	<a href="#">aaa</a>
+	<a href="#">aaa</a>
+	<a href="#">aaa</a>
+	<a href="#">aaa</a>
+</body>
+<script>
+	$(function(){
+		$('a[href = "#"]').on('click',function(){
+			return false;
+		})
+	})
+</script>
+</html>

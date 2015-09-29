@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock icon</title>
+    <script src="jquery.191.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .icon{
+            width: 256px;
+            height: 256px;
+            box-shadow:0 0 20px rgba(173,226,255,1);
+            border-radius: 40px;
+            position: absolute;
+        }
+        .clock .box{
+            width: 220px;
+            height: 220px;
+            background-image:linear-gradient(180deg,#5F5F5F,#292929);
+            box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+            border: 2px solid #fff;
+            border-radius: 220px;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 0;
+        }
+        .clock .point{
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 4px rgba(0,0,0,.5);
+            border-radius: 20px;
+            position: absolute;
+            top: 118px;
+            left: 118px;
+            z-index: 10;
+        }
+        .clock .h{
+            width: 10px;
+            height: 90px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 4px rgba(0,0,0,.5);
+            position: absolute;
+            top: 39px;
+            left: 123px;
+            z-index: 4;
+            transform-origin:5px 90px;
+            -webkit-transform-origin:5px 90px;
+            -moz-transform-origin:5px 90px;
+            -o-transform-origin:5px 90px;
+            /*-webkit-animation: btnRotate 60s linear infinite;*/
+        }
+        .clock .m{
+            width: 10px;
+            height: 70px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 4px rgba(0,0,0,.5);
+            position: absolute;
+            top: 59px;
+            left: 123px;
+            z-index: 3;
+            transform-origin:5px 70px;
+            -webkit-transform-origin:5px 70px;
+            -moz-transform-origin:5px 70px;
+            o-transform-origin:5px 70px;
+            /*-webkit-animation: btnRotate 30s linear infinite;*/
+        }
+        .clock .s{
+            width: 2px;
+            height: 140px;
+            background-color: #FF0000;
+            border-radius: 2px;
+            box-shadow: 0 0 4px rgba(0,0,0,.5);
+            position: absolute;
+            top: 28px;
+            left: 127px;
+            z-index: 11;
+            transform-origin:1px 100px;
+            -webkit-transform-origin:1px 100px;
+            -moz-transform-origin:1px 100px;
+            -o-transform-origin:1px 100px;
+            /*-webkit-animation: btnRotate 5s linear infinite;*/
+        }
+        .clock .s .d{
+            width: 10px;
+            height: 10px;
+            background-color: #FF0000;
+            border-radius: 10px;
+            position: absolute;
+            top: 95px;
+            left: -4px;
+            z-index: 11;
+        }
+
+        @-webkit-keyframes btnRotate {
+        0% {
+            transform: rotateZ(0deg);
+            -webkit-transform: rotateZ(0deg);
+            -o-transform: rotateZ(0deg);
+            -moz-transform: rotateZ(0deg);
+            }
+        100% {
+            transform: rotateZ(360deg);
+            -o-transform: rotateZ(360deg);
+            -moz-transform: rotateZ(360deg);
+            -webkit-transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="icon clock">
+    <div class="box"></div>
+    <div class="s">
+        <div class="d"></div>
+    </div>
+    <div class="point"></div>
+    <div class="h"></div>
+    <div class="m"></div>
+</div>
+</body>
+<script>
+$(function(){
+    $.fn.center = function(){
+        this.css({
+            'top' : ($(window).height() - this.height()) / 2 + $(window).scrollTop() + 'px',
+            'left' : ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + 'px'
+        })
+        return this;
+    }
+
+    $('.icon').center();
+})
+
+    var assist = {
+        clock : {
+            init : function () {
+                assist.clock.startMoving();
+            },
+            startMoving : function(){
+                var hc = $(".clock .h");
+                var mc = $(".clock .m");
+                var sc = $(".clock .s");
+                var date = new Date();
+                var h = date.getHours();
+                var m = date.getMinutes();
+                var s = date.getSeconds();
+                sc.css({
+                    "-webkit-transform" :  "rotate("+ (s*6-90) +"deg)",
+                    "-moz-transform" :  "rotate("+ (s*6-90) +"deg)",
+                    "-o-transform" :  "rotate("+ (s*6-90) +"deg)"
+                });
+                mc.css({
+                    "-webkit-transform" :  "rotate("+ (m*6 + s/10 -90) +"deg)",
+                    "-moz-transform" :  "rotate("+ (m*6 + s/10 -90) +"deg)",
+                    "-o-transform" :  "rotate("+ (m*6 + s/10 -90) +"deg)"
+                });
+                hc.css({
+                    "-webkit-transform" :  "rotate("+ (h*30 + m /2 -90) +"deg)",
+                    "-moz-transform" :  "rotate("+ (h*30 + m /2 -90) +"deg)",
+                    "-o-transform" :  "rotate("+ (h*30 + m /2 -90) +"deg)"
+                })
+                setTimeout( function (){
+                    assist.clock.startMoving();
+                },1000)
+            }
+        }
+    };
+
+    $( function () {
+        assist.clock.init();
+    })
+</script>
+</html>
