@@ -4,13 +4,26 @@
 	<meta charset="UTF-8">
 	<title>This is a mylogo</title>
 	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background-image: linear-gradient(180deg,#333,#fff);
+			background-repeat: no-repeat;
+			position: relative;
+			height: 100%;
+		}
 		.mylogo{
 			width: 500px;
 			height: 180px;
 			margin: 30px auto 0;
 			position: relative;
 		}
-		
+		.d{
+			position: relative;
+			width: 180px;
+			height: 180px;
+			float: left;
+		}
 		.d div{
 			background-color: #333;
 			border-color: #333;
@@ -27,46 +40,79 @@
 			width: 120px;
 			height: 120px;
 			border-radius: 180px;
-			background-color: #fff;
+			background-color: rgba(0,0,0,0);
 			border:30px solid #333;
 			position: absolute;
 			top: 0;
 			left: 0;
 		}
 		.c{
-			width: 120px;
-			height: 120px;
-			border-radius: 180px;
-			background-color: #fff;
-			border:30px solid #333;
-			position: absolute;
-			top: 0;
-			left: 150px;
+			position: relative;
+			width: 180px;
+			height: 180px;
+			float: left;
 		}
 		.c div{
 			background-color: #333;
 		}
 		.c .one{
-			width: 60px;
+			width: 120px;
+			height: 120px;
+			border-radius: 180px;
+			background-color: rgba(0,0,0,0);
+			border:30px solid #333;
+			position: absolute;
+			top: 0;
+			left: -30px;
+			z-index: 1;
+		}
+		.c .two{
+			width: 30px;
 			height: 80px;
-			background-color: #fff;
+			background-color: rgba(0,0,0,0);
 			position: absolute;
 			top: 20px;
 			left: 90px;
+			transform:rotate(30deg);
+			z-index: 1;
 		}
 		.c .two,.c .three{
-			width: 30px;
+			/*width: 30px;
 			height: 30px;
 			border-radius: 200px;
 			position: absolute;
+			display: none;*/
 		}
 		.c .two{
-			top: 30px;
-			left: 20px;
+			
 		}
 		.c .three{
 			top: 30px;
 			left: 40px;
+		}
+		.t{
+			position: relative;
+			width: 180px;
+			height: 180px;
+			float: left;
+		}
+		.t .one{
+			width: 180px;
+			height: 180px;
+			border-radius: 120px;
+			background-color: #333;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.t .two{
+			width: 160px;
+			height: 160px;
+			border-radius: 160px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0);
 		}
 		
 	</style>
@@ -82,7 +128,10 @@
 			<div class="two"></div>
 			<div class="three"></div>
 		</div>
-		<div class="t"></div>
+		<div class="t">
+			<div class="one"></div>
+			<div class="two"></div>
+		</div>
 		<div class="x"></div>
 		<div class="f"></div>
 	</div>
