@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript 回到顶部效果</title>
+	<script src="javascript/scrolltop.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.box{
+			width: 1190px;
+			margin:0 auto;
+		}
+		#btn{
+			width: 40px;
+			height: 40px;
+			background-image: url(images/top_bg.png);
+			background-position:0 0;
+			background-repeat:no-repeat;
+			background-color:red;
+
+			position: fixed;
+			right:10px;
+			bottom:30px;
+			margin-left: 610px;
+
+			display: none;
+		}
+		a#btn:hover{
+			background-position:0 -40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="images/tb_bg.jpg" alt="">
+	</div>
+	<a href="javascript:;" id="btn" title="回到顶部"></a>
+</body>
+</html>
