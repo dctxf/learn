@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollTop</title>
+	<script src="../jquery/jquery.191.js"></script>
+	<script src="javascript/jquery.scrollTop.js"></script>
+	<style>
+		body{
+			height: 3000px;
+		}
+		#top{
+			width: 30px;
+			height: 30px;
+			background-color: #f40;
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			text-align: center;
+			line-height: 12px;
+		}
+		#top a{
+			color: #fff;
+			text-decoration: none;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+<div style="height:500px;">aaa</div>
+<div id="cont">bb</div>
+	<div id="top"><a href="#">返回顶部</a></div>
+</body>
+<script>
+	$.scrolling({
+		selector : '#top',
+		target : '#cont',
+		during : 400,
+		/*callback : function( offsetTop ){
+			console.log('已经到达目标位置, 距离顶部高度为 ' + offsetTop );
+		}*/
+	})
+	// console.log($('html').offset().top)
+</script>
+</html>

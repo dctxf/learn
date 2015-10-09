@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<iframe src="" frameborder="0"><button onclick="newDoc()">点击加载百度</button></iframe>
+</body>
+<script>
+	window.onload = function(){
+		console.log(location.href);
+		console.log(location.pathname);
+	}
+
+	function newDoc(){
+		window.location.assign("http://www.baidu.com")
+	}
+</script>
+</html>
