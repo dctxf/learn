@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.191.js"></script>
+</head>
+<body>
+	<div class="banner">
+		<a href="#" data-srcmobile="../photo-browse/view.png" data-srcpc="../photo-browse/full-view.png"><img  src="" alt=""></a>
+		<a href="#" data-srcmobile="../photo-browse/view-2.png" data-srcpc="../photo-browse/full-view-2.png"><img src="" alt=""></a>
+	</div>
+</body>
+<script>
+$(function(){
+	function changeImg(){
+		var $bannerA = $('.banner a');
+		for (var i = 0; i < $bannerA.length; i++) {
+			var $img = $($bannerA[i]).find('img'),
+				srcPc = $($bannerA[i]).data('srcpc'),
+				srcMoblie = $($bannerA[i]).data('srcmobile');
+				 
+			// console.log($img.attr('src'))
+			if ($(window).innerWidth() <= 760 ) {
+				 $img.attr('src',srcMoblie);
+			}else{
+				 $img.attr('src',srcPc);
+			};
+			
+		};			
+	}
+
+	changeImg();
+	
+	$(window).resize(function(){
+		changeImg();
+	});
+})
+</script>
+</html>
