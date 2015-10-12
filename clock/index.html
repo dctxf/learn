@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数字时钟</title>
+	<script src="../jquery/jquery.191.js"></script>
+	<style>
+		html,body,div,span{
+			margin: 0;
+			padding: 0;
+		}
+		*{
+			box-sizing:border-box;
+		}
+		body{
+			background-color: #000;
+			margin: 0;
+			padding: 0;
+		}
+		.clock{
+			color:#fff;
+			text-align: center;
+			font-family: Helvetica Light;
+			font-size: 12rem;
+		}
+		.clock .h{
+			padding-right: 2rem;
+		}
+		.clock .m{
+			padding-right: 2rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="clock"></div>
+</body>
+<script>
+	$(function(){
+		//文字居中
+		var height = $(window).innerHeight() + 'px',
+			$clock = $('.clock');
+
+			$clock.css('line-height',height);
+		$(window).resize(function(){
+			var height = $(window).innerHeight() + 'px';
+			$clock.css('line-height',height);
+			console.log(height)
+
+		})
+		//给时钟补0
+		function checkTime( i ){
+			if (i < 10) {
+				i = '0' + i;
+			};
+			return i;
+		}
+		//时钟
+		function go(){
+			var date = new Date(),
+				h = checkTime(date.getHours()),
+				m = checkTime(date.getMinutes()),
+				s = checkTime(date.getSeconds()),
+
+				html =  '<span class="h">' + h +'</span>' + 
+						'<span class="m">' + m +'</span>' + 
+						'<span class="s">' + s +'</span>';
+
+			$clock.html(html);
+			setTimeout(function(){
+				go();
+			},1000)
+		}
+		
+		go();
+
+	})
+
+
+</script>
+</html>
