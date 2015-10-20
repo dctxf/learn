@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.191.js"></script>
+</head>
+<body>
+	
+</body>
+<script>
+	$(function(){
+		var img = new Image();
+		img.src = '../photo-browse/view.png';
+		console.log(img);
+		img.onerror = function(){
+			alert('加载失败！');
+		}
+		img.onload = function(){
+			alert('加载成功！');
+			$(this).appendTo('body');
+		}
+	})
+</script>
+</html>
