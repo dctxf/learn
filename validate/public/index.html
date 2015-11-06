@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+	<link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+	<form action="" id="validate-form" class="validate-form">
+		<div class="input-group">
+			<label for="username" class="name">用户名</label>
+			<input type="text" name="username">
+		</div>
+		<div class="input-group">
+			<label for="password" class="name">密码</label>
+			<input type="text" name="password" id="password">
+		</div>
+		<div class="input-group">
+			<label for="confirm-password" class="name">确认密码</label>
+			<input type="text" name="confirm-password" id="confirm-password">
+		</div>
+		<div class="input-group">
+			<label for="nameid" class="name">姓名</label>
+			<input type="text" name="nameid">
+		</div>
+		<div class="input-group">
+			<label for="sex" class="name">性别</label>
+			<input type="radio" name="sex" class="radio">男<input type="radio" name="sex" class="radio">女
+		</div>
+		<div class="input-group">
+			<label for="date" class="name">出生日期</label>
+			<input type="text" name="date">
+		</div>
+		<div class="input-group">
+			<label for="address" class="name">地区</label>
+			<select name="address" id="">
+				<option value="">选择地区</option>
+				<option value="">北京</option>
+				<option value="">上海</option>
+			</select>
+			<select name="address" id="">
+				<option value="">选择区县</option>
+				<option value="">朝阳</option>
+				<option value="">海淀</option>
+			</select>
+		</div>
+		<div class="input-group">
+			<label for="phone" class="name">手机号</label>
+			<input type="text" name="phone">
+		</div>
+		<div class="input-group">
+			<label for="mail" class="name">邮箱</label>
+			<input type="text" name="mail">
+		</div>
+		<div class="input-group">
+			<label for="love" class="name">爱好</label>
+			<input type="checkbox" name="love">篮球<input type="checkbox" name="love">足球<input type="checkbox" name="love">乒乓球
+		</div>
+		<div class="input-group">
+			<label for="website" class="name">网站</label>
+			<input type="text" name="website">
+		</div>
+		<div class="button-group">
+			<input type="submit" value="登录" class="button button-default" id="btn">
+		</div>
+	</form>
+</body>
+<script src="javascripts/main.js"></script>
+</html>

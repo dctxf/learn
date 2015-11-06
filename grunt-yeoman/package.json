@@ -11,10 +11,9 @@
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-cssmin": "^0.12.2",
     "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-imagemin": "^0.9.4",
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
-    "jpegtran-bin": "0.2.0",
-    "grunt-contrib-imagemin": "~0.4.1",
     "grunt-eslint": "^17.0.0",
     "grunt-filerev": "^2.2.0",
     "grunt-mocha": "^0.4.12",
@@ -25,6 +24,7 @@
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^2.0.0",
     "jit-grunt": "^0.9.1",
+    "jpegtran-bin": "^0.2.2",
     "time-grunt": "^1.1.0"
   },
   "engines": {
@@ -54,10 +54,5 @@
         2
       ]
     }
-  },
-  "dependencies": {
-    "autoprefixer": "^6.0.3",
-    "grunt-contrib-imagemin": "^0.3.0",
-    "jpegtran-bin": "^3.0.5"
   }
 }

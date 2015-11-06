@@ -2,3 +2,13 @@
 
 ## Good Good Study,Day Day Up!
 
+>Here are some preview links.
+
+[自定义alert](http://dctxf.github.io/learn/alert)
+
+[angularjs](http://dctxf.github.io/learn/angularjs)
+
+[clock](http://dctxf.github.io/learn/clock)
+
+[css3 loading](http://dctxf.github.io/learn/css3)
+
