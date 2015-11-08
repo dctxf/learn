@@ -1,0 +1,83 @@
+html,body,div,p,hr,ul,li{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	color: #fff;
+}
+ul,li{
+	list-style: none;
+}
+.container{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+	background-color: #eee;
+}
+
+.side-left{
+	float: left;
+	width: 300px;
+	padding: 10px;
+	background-color: red;
+	margin-right: -300px;
+}
+.auto-left{
+	width: 100%;
+	float: right;
+}
+.auto-left .cont{
+	margin-left: 300px;
+	padding: 10px;
+	background-color: blue;
+}
+.side-right{
+	width: 300px;
+	float: right;
+	background-color: red;
+	padding: 10px;
+	margin-left: -300px;
+}
+.auto-right{
+	width: 100%;
+	float: left;
+}
+.auto-right .cont{
+	padding: 10px;
+	background-color: blue;
+}
+
+.hr{
+	height: 1px;
+	background-color: #eee;
+}
+
+.wrap{
+	width: 170px;
+	margin: 10px auto 0;
+	background-color: #eee;
+	overflow: hidden;
+	padding: 0 0 5px 5px;
+}
+.wrap li{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #ddd;
+	float: left;
+	margin: 5px 5px 0 0;
+	position: relative;
+}
+.wrap li a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+.wrap li a:hover{
+	border: 5px solid #fff;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+}
