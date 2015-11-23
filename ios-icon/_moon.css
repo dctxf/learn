@@ -1,0 +1,56 @@
+.moon{
+	background: -webkit-linear-gradient(top,#0E254F,#2A508D);
+	overflow: hidden;
+}
+.moon .m1{
+	width: 84px;
+	height: 84px;
+	background-color: #FFFD00;
+	border-radius: 50%;
+
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 2;
+	transform: rotate(25deg);
+}
+.moon .m2{
+	width: 84px;
+	height: 84px;
+	background: -webkit-linear-gradient(top,#0F2651,#244780);
+	border-radius: 50%;
+
+	position: absolute;
+	top: 0px;
+	left: -25px;
+	z-index: 2;
+	transform: rotate(-25deg);
+}
+.moon .s1{
+	width: 10px;
+	height: 10px;
+	border-top:20px solid #FFFD00;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:10px solid transparent;
+
+	position: absolute;
+	top: 10px;
+	left: 25px;
+	z-index: 2;
+	transform: rotate(-25deg);
+}
+.moon .s1:before{
+	width: 10px;
+	height: 10px;
+	border-top:20px solid transparent;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:10px solid #FFFD00;
+
+	position: absolute;
+	top: 10px;
+	left: 25px;
+	z-index: 2;
+	transform: rotate(-25deg);
+}

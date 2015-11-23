@@ -1,0 +1,27 @@
+.message{
+	background: -webkit-linear-gradient(top,#8fff73,#0cd60c);
+}
+.message .m1{
+	width: 86px;
+    height: 71px;
+    
+    border-radius: 86px/71px;
+    background-color: #fff;
+    position: absolute;
+    top: 19px;
+    left: 14px;
+    z-index: 1;
+}
+.message .m2{
+	width: 42px;
+    height: 12px;
+	border-bottom: 22px solid #fff;
+    border-radius: 0 50px 0;
+
+	transform:rotate(-91deg);
+
+    position: absolute;
+    top: 60px;
+    left: 24px;
+    z-index: 1;
+}
