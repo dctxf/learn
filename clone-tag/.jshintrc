@@ -1,0 +1,7 @@
+{
+	"jquery": true,
+	"node": true,
+	"bitwise": true,
+	"curly": true,
+	"indent":true
+}

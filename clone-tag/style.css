@@ -1,0 +1,119 @@
+* {
+	box-sizing: border-box;
+}
+html, body, div, ul, li, h3 {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+body {
+	font-size: 14px;
+	color: #666;
+	line-height: 1.8;
+	background-color: #f4f4f4;
+}
+input, button {
+	outline: none;
+}
+::selection {
+	background: #BC8AFF;
+	color: #fff;
+}
+::-moz-selection {
+	background: #BC8AFF;
+	color: #fff;
+}
+::-webkit-selection {
+	background: #BC8AFF;
+	color: #fff;
+}
+.form-box {
+	width: 500px;
+	overflow: hidden;
+	margin: 100px auto 0;
+	border: 1px solid #eee;
+	padding: 20px;
+	background-color: #fff;
+}
+h3 {
+	font-size: 14px;
+}
+.form-box .box {
+	border: 1px solid #eee;
+	padding: 0 5px 5px 5px;
+	cursor: text;
+	overflow: hidden;
+}
+.form-box .box input {
+	border: none;
+	font-size: 14px;
+	color: #666;
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	margin-top: 5px;
+}
+.tags-copy {
+	display: inline-block;
+	float: left;
+}
+.tags-copy .tag {
+	background-color: #BC8AFF;
+	display: inline-block;
+	padding-left: 5px;
+	color: #fff;
+	font-size: 12px;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	height: 24px;
+	line-height: 24px;
+}
+.tags-copy .tag span {
+	display: inline-block;
+	padding: 0 5px;
+	background-color: #B075FF;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.tags-copy .tag:hover span {
+	background-color: #CEA9FF;
+	transition: all 0.5s;
+}
+.tags {
+	margin: 20px 0;
+}
+.tags .tag {
+	display: inline-block;
+	background-color: #ddd;
+	padding: 0 5px;
+	cursor: pointer;
+	border: 1px solid #ddd;
+}
+.tags .tag:hover {
+	background-color: #eee;
+	border: 1px solid #ddd;
+	transition: all 0.5s;
+}
+.tags .selected {
+	display: inline-block;
+	background-color: #f4f4f4;
+	padding: 0 5px;
+	cursor: text;
+	border: 1px solid #f4f4f4;
+	color: #999;
+}
+.button {
+	background-color: #BC8AFF;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	line-height: 3;
+	padding: 0 50px;
+}
+.button:hover {
+	background-color: #B075FF;
+	transition: all 0.5s;
+}
