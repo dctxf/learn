@@ -31,3 +31,9 @@
 
 >tab滑动门
 [tab](http://dctxf.github.io/learn/tab)
+
+>clone tags 个性标签
+[clone tags](http://dctxf.github.io/learn/clone-tag)
+
+>css3 icon
+[css3 icon](http://dctxf.github.io/learn/css3-icon)

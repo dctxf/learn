@@ -1,0 +1,28 @@
+.moon{
+	background: -webkit-linear-gradient(top,#0E254F,#2A508D);
+	overflow: hidden;
+}
+.moon .m1{
+	width: 84px;
+	height: 84px;
+	background-color: #FFFD00;
+	border-radius: 50%;
+
+	position: absolute;
+	top: 15px;
+	left: 4px;
+	z-index: 2;
+	transform: rotate(25deg);
+}
+.moon .m2{
+	width: 84px;
+	height: 84px;
+	background: -webkit-linear-gradient(top,#0F2651,#244780);
+	border-radius: 50%;
+
+	position: absolute;
+	top: 0px;
+	left: -25px;
+	z-index: 2;
+	transform: rotate(-25deg);
+}
