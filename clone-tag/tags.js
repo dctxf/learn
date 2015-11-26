@@ -15,7 +15,11 @@ $(function(){
 	$tagsCopy.on('click','.tag',function(){
 		var text = $(this).find('em')[0].innerText,
 			tagText = $tags[0].innerText;
-			console.log(text);
+			$('#tags').find('li').each(function(){
+			  if( $(this).html() === text ){
+			     $(this).addClass('tag').removeClass('selected');
+			  }
+			});
 		$(this).remove();
 	});
 
@@ -36,5 +40,4 @@ $(function(){
 		// console.log(e.which);
 		// console.log();
 	});
-
 });
