@@ -1,0 +1,62 @@
+.photos {
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+	.photo{
+		display: block;
+		width: 30px;
+		height: 50px;
+		border-radius: 50px;
+		position: absolute;
+		z-index: 2;
+		
+	}
+	.p1 {
+		background-color: rgba(248, 163, 57, 0.8);
+		top: 5px;
+		left: 40px;
+	}
+	.p2 {
+		background-color: rgba(234, 223, 47, 0.8);
+		top: 13px;
+		right: 18px;
+		transform: rotate(45deg);
+	}
+	.p3 {
+		background-color: rgba(165, 213, 114, 0.8);
+		top: 32px;
+		right: 15px;
+		transform: rotate(90deg);
+	}
+	.p4 {
+		background-color: rgba(111, 190, 169, 0.8);
+		bottom: 13px;
+		right: 18px;
+		transform: rotate(135deg);
+	}
+	.p5 {
+		background-color: rgba(127, 168, 220, 0.8);
+		border-radius: 50px;
+		bottom: 5px;
+		left: 40px;
+		transform: rotate(180deg);
+	}
+	.p6 {
+		background-color: rgba(169, 142, 197, 0.8);
+		bottom: 13px;
+		left: 18px;
+		transform: rotate(225deg);
+	}
+	.p7 {
+		background-color: rgba(165, 142, 188, 0.8);
+		top: 32px;
+		left: 15px;
+		transform: rotate(270deg);
+	}
+	.p8 {
+		background-color: rgba(255, 92, 99, 0.8);
+		top: 13px;
+		left: 18px;
+		transform: rotate(315deg);
+	}
+}
