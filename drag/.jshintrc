@@ -1,0 +1,6 @@
+{
+  "sub":true,
+  "node": true,
+  "es5": true,
+  "jquery": true
+}

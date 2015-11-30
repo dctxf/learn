@@ -1,0 +1,64 @@
+@import 'compass/reset';
+*{
+	box-sizing:border-box;
+}
+body{
+	background-color: #f4f4f4;
+}
+input{
+	outline: none;
+}
+.form-box{
+	width: 400px;
+	margin: 20px auto 0;
+	background-color: #fff;
+	padding: 20px;
+}
+
+label.select-label{
+	position: relative;
+	input.select-input{
+		width: 100%;
+		line-height: 34px;
+		height: 34px;
+		padding: 0 10px;
+		border:1px solid #ddd;
+		font-size: 14px;
+		color: #666;
+	}
+	input.active{
+		border:1px solid #D58FF9;
+	}
+	ul.select-list{
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+		background-color: #fff;
+		border-left:1px solid #D58FF9;
+		border-right:1px solid #D58FF9;
+		border-bottom:1px solid #D58FF9;
+		max-height: 340px;
+		overflow-y:auto;
+		display: none;
+		li{
+			line-height: 34px;
+			padding: 0 10px;
+			font-size: 14px;
+			cursor: pointer;
+			&:hover{
+				background-color: #f4f4f4;
+			}
+		}
+	}
+}
+button.select-btn{
+	width: 200px;
+    height: 34px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    &:hover{
+    	background-color: #f4f4f4;
+    }
+}
