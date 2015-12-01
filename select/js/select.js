@@ -11,8 +11,8 @@ $(function(){
 		$selectList.on('click','li',function(e){
 			var val = $(this).text();
 			$input.attr('value',val);
-			$input.removeClass('active');
-
+			// $input.removeClass('active');
+			$(this).siblings().remove();
 			$selectList.hide();
 			e.stopPropagation();
 		});

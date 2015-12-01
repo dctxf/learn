@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mousewheel</title>
+</head>
+<body>
+	look at console
+</body>
+	<script>
+	var doc = window;
+	doc.onmousedown = function(e){
+		console.log(e.button);
+	}
+	doc.onmousewheel = function(e){
+		console.log(e.wheelDelta);
+	}
+	</script>
+</html>
