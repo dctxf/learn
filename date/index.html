@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>date</title>
+</head>
+<body>
+	<div id="date">aa</div>
+	<script>
+	window.onload = function(){
+		var cont = document.getElementById('date');
+		showDate();
+		function showDate(){
+			var date = new Date(),
+				year = date.getFullYear(),
+				day = date.getDay(),
+				hour = date.getHours(),
+				minutes = date.getMinutes(),
+				second = date.getSeconds();
+			cont.innerText = year + '年' + day + '日' + hour + '时' + minutes + '分' + second + '秒';
+			var	timer = setTimeout(function(){
+				showDate();	
+			},1000);
+		}
+	};
+	</script>
+</body>
+</html>
