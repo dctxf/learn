@@ -12,14 +12,23 @@ window.onload = function(){
 		result = 0;
 
 		resultShow(0);
+		resultInputValue = '0';
 
 		// 数字输入
 		for (var i = 0; i < numBtn.length; i++) {
 			(function(i){
 				numBtn[i].onclick = function(){
-					var storage = resultInputValue += this.innerText;
-					resultShow(storage);
-					console.log(resultInputValue.length);
+					
+					if (resultInputValue === '0') {
+						resultInputValue = '';
+						resultInputValue += this.innerText;
+						resultShow(resultInputValue);
+					}else{
+						resultInputValue += this.innerText;
+						resultShow(resultInputValue);
+					}
+					/*console.log(resultInputValue.length);
+					console.log(resultInputValue);*/
 				}
 			})(i);
 		}
@@ -38,11 +47,12 @@ window.onload = function(){
 		clearBtn.onclick = function(){
 			clear();
 		}
-			console.log(resultInputValue.length);
+			console.log(resultInputValue);
 
 		// 回退按钮
 		backBtn.onclick = function(){
 			console.log(resultInputValue.length);
+			console.log(resultInputValue);
 
 			if (resultInputValue.length > 1) {
 				backspace();
@@ -50,7 +60,7 @@ window.onload = function(){
 				return false;
 			}else if(resultInputValue.length == 1){
 				resultShow(0);
-				resultInputValue = '';
+				resultInputValue = '0';
 				return false;
 			}
 
