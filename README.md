@@ -40,3 +40,6 @@
 
 >鼠标事件
 [mousewheel](http://dctxf.github.io/learn/mousewheel)
+
+>Html5 FileReader API
+[FileReader](http://dctxf.github.io/learn/file-reader)
