@@ -4,11 +4,12 @@
 @import "common";
 
 ul.mylogo {
-	width: px2rem(1000);;
-	height: px2rem(1000);;
+	width: px2rem(860);;
+	height: px2rem(860);;
 	background-color: #fff;
 	font-size: 0;
 	position: relative;
+	padding-left: px2rem(10);
 	> li{
 		position: absolute;
 		font-size: 0;
@@ -20,7 +21,7 @@ ul.mylogo {
 		&.d {
 			width: px2rem(300);
 			height: px2rem(300);
-			top: px2rem(350);
+			top: px2rem(300);
 			left: px2rem(50);
 			i.d1{
 				width: px2rem(300);
@@ -42,7 +43,7 @@ ul.mylogo {
 			width: px2rem(300);
 			height: px2rem(300);
 			// background-color: #F39802;
-			top: px2rem(350);
+			top: px2rem(300);
 			left: px2rem(290);
 			i.c1{
 				width: px2rem(300);
@@ -52,34 +53,42 @@ ul.mylogo {
 			}
 			i.c2{
 				position: absolute;
+				top: px2rem(110);
+				right: px2rem(0);
+				width: px2rem(80);
+				height: px2rem(80);
+				background-color: #fff;
+			}
+			i.c3{
+				position: absolute;
 				top: px2rem(88);
-				right: px2rem(-1);
+				right: px2rem(0);
 				width: px2rem(65);
 				height: px2rem(65);
 				background-color: #fff;
 				transform:rotate(-30deg);
 			}
-			i.c3{
-				position: absolute;
-				top: px2rem(66);
-				right: px2rem(12);
-				width: px2rem(65);
-				height: px2rem(65);
-				background-color: #F39802;
-				@include border-radius(px2rem(65));
-			}
 			i.c4{
 				position: absolute;
-				bottom: px2rem(60);
-				right: px2rem(12);
+				bottom: px2rem(88);
+				right: px2rem(0);
 				width: px2rem(65);
 				height: px2rem(65);
-				background-color: #F39802;
-				@include border-radius(px2rem(65));
+				background-color: #fff;
+				transform:rotate(30deg);
 			}
 			i.c5{
 				position: absolute;
-				bottom: px2rem(60);
+				top: px2rem(65);
+				right: px2rem(12);
+				width: px2rem(65);
+				height: px2rem(65);
+				background-color: #F39802;
+				@include border-radius(px2rem(65));
+			}
+			i.c6{
+				position: absolute;
+				bottom: px2rem(65);
 				right: px2rem(12);
 				width: px2rem(65);
 				height: px2rem(65);
@@ -90,23 +99,81 @@ ul.mylogo {
 		&.t{
 			width: px2rem(300);
 			height: px2rem(150);
-			background-color: #06913B;
-			top: px2rem(350);
-			left: px2rem(650);
+			// background-color: #06913B;
+			top: px2rem(300);
+			left: px2rem(514);
+			i.t1{
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: px2rem(180);
+				height: px2rem(65);
+				background-color: #06913B;
+				@include border-radius(65px);
+			}
+			i.t2{
+				position: absolute;
+				top: 0;
+				left: px2rem(-10);
+				width: px2rem(280);
+				height: px2rem(280);
+				// background-color: #06913B;
+				border-top:px2rem(65) solid #06913B;
+				border-bottom:px2rem(65) solid transparent;
+				border-left:px2rem(65) solid transparent;
+				border-right:px2rem(65) solid transparent;
+				@include border-radius(px2rem(300) px2rem(300) 0 0);
+				transform:rotate(45deg);
+			}
+			i.t3{
+				position: absolute;
+				top: 0;
+				left: px2rem(-10);
+				width: px2rem(280);
+				height: px2rem(280);
+				// background-color: #06913B;
+				border-top:px2rem(65) solid #06913B;
+				border-bottom:px2rem(65) solid transparent;
+				border-left:px2rem(65) solid transparent;
+				border-right:px2rem(65) solid transparent;
+				@include border-radius(px2rem(300) px2rem(300) 0 0);
+				transform:rotate(-20deg);
+			}
+			i.t4{
+				position: absolute;
+				top:px2rem(65);
+				left: 0;
+				width: px2rem(65);
+				height: px2rem(65);
+				background-color: #06913B;
+				@include border-radius(px2rem(65));
+			}
+			i.t6{
+				position: absolute;
+				top:px2rem(0);
+				right: px2rem(30);
+				width: px2rem(65);
+				height: px2rem(170);
+				background-color: #06913B;
+				@include border-radius(px2rem(65));
+			}
 		}
 		&.x{
 			width: px2rem(150);
 			height: px2rem(150);
-			background-color: #16AE68;
-			top: px2rem(500);
-			left: px2rem(650);
+			// background-color: #16AE68;
+			top: px2rem(450);
+			left: px2rem(515);
+			i.x1{
+				position: absolute;
+			}
 		}
 		&.f{
 			width: px2rem(150);
 			height: px2rem(150);
-			background-color: #00A0EB;
-			top: px2rem(500);
-			left: px2rem(800);
+			// background-color: #00A0EB;
+			top: px2rem(450);
+			left: px2rem(665);
 		}
 	}
 	
