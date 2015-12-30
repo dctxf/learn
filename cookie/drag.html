@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#drag{
+			width:100px;
+			height:100px;
+			background:red;
+			position:absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="drag"></div>
+</body>
+<script src="cookie.js"></script>
+<script>
+	window.onload = function(){
+		var oDiv = document.getElementById('drag');
+
+		var disX = 0;
+		var disY = 0;
+
+		var x=getCookie('x');
+		var y=getCookie('y');
+
+		if(x){
+			oDiv.style.left=x+'px';
+			oDiv.style.top=y+'px';
+		}
+
+		oDiv.onmousedown = function(e){
+			var oEvent=e||event;
+
+			disX=oEvent.clientX-oDiv.offsetLeft;
+			disY=oEvent.clientY-oDiv.offsetTop;
+
+			document.onmousemove = function(e){
+				var oEvent=e||event;
+
+				oDiv.style.left=oEvent.clientX-disX+'px';
+				oDiv.style.top=oEvent.clientY-disY+'px';
+			};
+
+			document.onmouseup = function(){
+				document.onmousemove=null;
+				document.onmouseup=null;
+
+				setCookie('x', oDiv.offsetLeft, 5);
+				setCookie('y', oDiv.offsetTop, 5);
+			};
+			return false;
+		};
+
+
+	};
+</script>
+</html>
