@@ -1,13 +1,22 @@
+# 浏览器版本判断
+
+## 原理
+
+利用`window.navigator.userAgent`。返回关于浏览器的信息，通过字符串匹配，让我们知道当前的浏览器情况。
+
+## 详细代码
+
+```
 /**
  * [获取浏览器名称方式一]
  */
 (function getExplorer() {
 	var explorer = window.navigator.userAgent ;
-	//ie 
+	//ie
 	if (explorer.indexOf('MSIE') >= 0) {
 		console.log('ie');
 	}
-	//firefox 
+	//firefox
 	else if (explorer.indexOf('Firefox') >= 0) {
 		console.log('Firefox');
 	}
@@ -32,7 +41,7 @@
 
 var browser = getBrowserInfo() ;
 var verinfo = (browser+"").replace(/[^0-9.]/ig,""); 
-console.log(browser); 
+console.log(browser);
 
 
 function getBrowserInfo(){
@@ -61,3 +70,7 @@ function getBrowserInfo(){
 		return agent.match(regStr_saf) ;
 	}
 }
+```
+
+
+
