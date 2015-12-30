@@ -6,7 +6,7 @@
 名称 | 地址
 ---- | ----
 360安全卫士10官网 | [查看](http://dctxf.github.io/learn/360)
-ajax | [查看](http://dctxf.github.io/learn/ajax)
+ajax | [查看](https://github.com/dctxf/learn/tree/master/ajax)
 自定义弹出框 | [查看](http://dctxf.github.io/learn/alert)
 Angular | [查看](http://dctxf.github.io/learn/angularjs)
 css3时钟 | [查看](http://dctxf.github.io/learn/clock)

@@ -1,0 +1,39 @@
+#alertdiv{
+    position:absolute;
+    display:none ;
+    overflow:hidden;
+    padding:20px;
+    top: 50%;
+    left: 50%;
+    text-align:center;
+    line-height:22px;
+    background-color:#fff;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    max-width: 280px;
+    width: 80%;
+}
+#alerttext{
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+#alertbtn{
+    width: 100%;
+    line-height: 34px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: red;
+    text-align: center;
+    border-radius:4px;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    color: #EB5508;
+}
+#alertbtn:hover{
+    background-color:red;
+    border-color:red;
+    color: #fff;
+}
