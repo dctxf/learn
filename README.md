@@ -7,9 +7,9 @@ Learning learning on the code of the record, if we can help you, it’s my honou
 
 名称 | 地址
 ---- | ----
-ajax | [查看](https://github.com/dctxf/learn/tree/master/ajax)
-自定义弹出框 | [查看](https://github.com/dctxf/learn/tree/master/alert)
-浏览器判断 | [查看](https://github.com/dctxf/learn/tree/master/ifbrower)
+ajax | [查看](https://github.com/dctxf/learn/ajax)
+自定义弹出框 | [查看](https://github.com/dctxf/learn/alert)
+浏览器判断 | [查看](https://github.com/dctxf/learn/ifbrowser)
 css3时钟 | [查看](http://dctxf.github.io/learn/clock)
 css3加载动画 | [查看](http://dctxf.github.io/learn/css3)
 css3滑动导航 | [查看](http://dctxf.github.io/learn/nav)
