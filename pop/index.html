@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="btn">点我试试</button>
+</body>
+<script src="alert.js"></script>
+<script>
+var oBtn = document.getElementById('btn');
+oBtn.onclick = function(){
+  alert({
+    id : 'alertContainer',
+    className : 'alertContainer',
+    content : '这是一个弹出层'
+  });
+};
+</script>
+</html>
