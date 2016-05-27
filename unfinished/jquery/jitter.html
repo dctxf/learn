@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jitter</title>
+	<script src="jquery.191.js"></script>
+	<style>
+		.box{
+			width: 300px;
+			height: 200px;
+			position: fixed;
+			top: 30px;
+			left: 50%;
+			margin-left: -150px;
+			background-color: red;
+		}
+		.btn{
+			width: 100px;
+			height: 40px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="box"></div>
+	<button class="btn">点我试试</button>
+</body>
+<script>
+	var $btn = $('.btn'),
+		$box = $('.box'),
+		_left = $box.offset().left;
+
+	$btn.on('click',function(){
+		console.log(_left);
+		$box.stop().animate({
+			left : "51%"
+		},100).animate({
+			left : "49%"
+		},100).animate({
+			left : "51%"
+		},100).animate({
+			left : "49%"
+		},100).animate({
+			left : "50%"
+		})
+		console.log(_left);
+
+	})
+		console.log(_left);
+
+</script>
+</html>

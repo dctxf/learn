@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.191.js"></script>
+	<style>
+		code{
+			display: block;
+			background-color: #333;
+			color: #fff;
+			line-height: 1.8em;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	函数在创建之后直接自动执行，通常称之为自调用匿名函数（Self-Invoked Anonymous Function）或直接调用函数表达式（Immediately Invoked Function Expression ）。格式如下：
+	<code>
+		(function(){	<br>
+		    // 置于此处的代码将自动执行<br>
+		})();  <br>
+		(function(a,b){<br>
+		    var result = a+b;<br>
+		    return result;<br>
+		})(10,20)<br>
+	</code>
+</body>
+<script>
+	$(function(){
+		(function a(){
+			console.log(1);
+		})();
+	})
+</script>
+</html>

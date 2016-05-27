@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab</title>
+	<script src="jquery.191.js"></script>
+	<style>
+	ul,li{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.tab-box{
+		width: 600px;
+		height: 430px;
+		overflow: hidden;
+		margin: 0 auto;
+		border: 1px solid #ddd;
+		position: relative;
+	}
+	.tab-bar{
+		width: 600px;
+		height: 30px;
+		border-bottom: 1px solid #ddd;
+	}
+	.tab-bar li{
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		float: left;
+	}
+	.tab-bar li.active{
+		color: #fff;
+		background-color: #666;
+	}
+	.tab-cont{
+		width: 300%;
+		height: 400px;
+		overflow: hidden;
+		position: absolute;
+		top: 30px;
+		left: 0;
+	}
+	.tab-cont li{
+		width: 600px;
+		height: 400px;
+		text-align: center;
+		line-height: 400px;
+		background-color: red;
+		color: #fff;
+		float: left;
+	}
+
+	</style>
+</head>
+<body>
+<div class="tab-box">
+	<ul class="tab-bar">
+		<li class="active">bar1</li>
+		<li>bar2</li>
+		<li>bar3</li>
+	</ul>
+	<ul class="tab-cont">
+		<li style="display:block">cont1</li>
+		<li>cont2</li>
+		<li>cont3</li>
+	</ul>
+</div>
+</body>
+<script>
+	var $tabBar = $('.tab-bar li'),
+		$tabCont = $('.tab-cont li'),
+		timer = null,
+		during = 3000;
+
+	$tabBar.on('click',function(){
+		var _index = $(this).index();
+		var _width = $tabCont.width();
+		$(this).addClass('active')
+				.siblings().removeClass('active');
+		$tabCont.parent().stop().animate({
+			left : -_index*_width
+		},400);
+	});
+
+	function autoRun(){
+		var _index = $('.tab-bar li.active').index(),
+			len = $('.tab-bar li').length,
+			next = _index + 1;
+
+		if( next == len ){
+			next = 0;
+		}
+
+		$tabCont.parent().stop().animate({
+			left : -next * $tabCont.width()
+		},300,'swing',function(){
+			$('.tab-bar li').eq( next ).addClass('active').siblings().removeClass('active');
+		});
+
+		timer = setTimeout(function(){
+			autoRun();
+		}, during );
+	}
+
+	setTimeout(function(){
+		autoRun();
+	}, during );
+
+	$('.tab-box').on('mouseenter',function(){
+		clearTimeout( timer );
+	}).on('mouseleave',function(){
+		setTimeout(function(){
+			autoRun();
+		}, during );
+	})
+
+
+</script>
+</html>

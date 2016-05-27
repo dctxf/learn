@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.191.js"></script>
+	<script src="jquery.widget.js"></script>
+</head>
+<body>
+	<p>aaaa</p>
+</body>
+<script>
+	// console.log(jQuery.fn.jquery);
+	/*$(function(){
+		$('p').highLight();
+	})*/
+	//调用
+	//调用者覆盖 插件暴露的共公方法
+	$.fn.highLight.format = function (txt) {
+       return "<em>" + txt + "</em>"
+    }
+    $(function () {
+        $("p").highLight({ foreground: 'orange', background: '#ccc' }); //调用自定义 高亮插件
+    });
+
+    $(function(){
+    	var a = 1;
+    	if (a == 1) {
+    		console.log(11)
+    	}
+    })
+</script>
+</html>

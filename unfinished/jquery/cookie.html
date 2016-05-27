@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.191.js"></script>
+	<script src="jquery.cookie.js" type="text/javascript"></script>
+</head>
+<body>
+<form action="" method="post">
+        <div class="form">
+            <div id="J_UserName" class="loginItem">
+                     <label>用户名：</label>
+                     <input maxlength="200" value="" name="u_username" class="log_Field" id="wsc-username">              
+            </div>
+            <div class="loginItem" id="J_Password">
+                 <label>密&nbsp;&nbsp;码：</label>
+                 <input type="password" value="" maxlength="20" name="u_pwd" class="log_Field" id="wsc-password">
+            </div>
+           
+            <div class="loginRemember">                   
+                    <input type="checkbox" checked="true" name="chkRememberUsername" class="checkbox" id="rmbUser">
+                    <label for="rmbUser">记住用户名</label>
+                    <a href="#">忘记密码?</a>
+            </div>
+            <div class="loginItem loginButton" id="wait">
+                   <input type="submit" value="登录" onclick="saveUserInfo()" class="button" id="log_Commit">               
+            </div>
+        </div><!--form div-->
+    </form> 
+</body>
+<script>
+//初始化页面时验证是否记住了密码
+$(function() {
+    if ($.cookie("rmbUser") == "true") {
+        $("#rmbUser").prop("checked", true);
+        $("#wsc-username").val($.cookie("userName"));
+        $("#wsc-password").val($.cookie("passWord"));
+    }
+});
+
+function saveUserInfo() {
+    if ($("#rmbUser").prop("checked") == true) {
+        var userName = $("#wsc-username").val();
+        var passWord = $("#wsc-password").val();
+        $.cookie("rmbUser", "true", { expires: 7 }); // 存储一个带7天期限的 cookie
+        $.cookie("userName", userName, { expires: 7 }); // 存储一个带7天期限的 cookie
+        $.cookie("passWord", passWord, { expires: 7 }); // 存储一个带7天期限的 cookie
+    }
+    else {
+        $.cookie("rmbUser", "false", { expires: -1 });        // 删除 cookie
+        $.cookie("userName", '', { expires: -1 });
+        $.cookie("passWord", '', { expires: -1 });
+    }
+}
+</script>
+</html>
